@@ -18,69 +18,127 @@
         }
         .container {
             text-align: center;
-            max-width: 700px;
+            max-width: 600px;
+            width: 100%;
         }
-        .logo {
-            font-size: 4rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-        }
+        .logo { font-size: 4rem; font-weight: 800; margin-bottom: 12px; }
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
             font-weight: 700;
         }
-        p {
-            font-size: 1.15rem;
-            line-height: 1.7;
+        .subtitle {
+            font-size: 1.05rem;
+            line-height: 1.6;
             color: #c4c4e0;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
         .badge {
             display: inline-block;
             background: rgba(255,255,255,0.1);
-            padding: 8px 20px;
+            padding: 6px 18px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #a0a0d0;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
+        .contact-form {
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        .contact-form h2 {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #d0d0f0;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: #a0a0d0;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.07);
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #667eea;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .btn-send {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
+        }
+        .btn-send:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        #form-status {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            text-align: center;
+            min-height: 24px;
+        }
+        #form-status.success { color: #4ade80; }
+        #form-status.error { color: #f87171; }
         .links {
             display: flex;
-            gap: 16px;
+            gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 30px;
         }
         .links a {
             color: #fff;
             text-decoration: none;
-            padding: 12px 28px;
+            padding: 10px 22px;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            transition: all 0.3s;
         }
-        .links a.github {
-            background: #24292e;
-        }
-        .links a.github:hover {
-            background: #2f363d;
-        }
-        .links a.email {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
-        .links a.email:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
-        }
+        .links a.github { background: #24292e; }
+        .links a.github:hover { background: #2f363d; }
+        .links a.email { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .links a.email:hover { transform: translateY(-2px); }
         .status-bar {
-            margin-top: 50px;
-            padding: 16px 24px;
-            background: rgba(255,255,255,0.05);
+            padding: 14px 20px;
+            background: rgba(255,255,255,0.04);
             border-radius: 12px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: #8888b0;
         }
         .status-bar .dot {
@@ -101,19 +159,88 @@
     <div class="container">
         <div class="logo">✨</div>
         <h1>Main Test MyJade</h1>
-        <p>
-            This site was created by <strong>My Jade</strong> — your COO and VA.<br />
-            Deployed automatically from GitHub to Vercel in seconds.
+        <p class="subtitle">
+            Built by <strong>My Jade</strong> — deployed automatically<br />
+            from GitHub to Vercel.
         </p>
         <div class="badge">🚀 Auto-deployed via OpenClaw</div>
         <div class="links">
-            <a href="https://github.com/myocjade511/main-test-myjade" class="github" target="_blank">📂 View on GitHub</a>
-            <a href="mailto:getclients4u@gmail.com" class="email">📧 Email Me</a>
+            <a href="https://github.com/myocjade511/main-test-myjade" class="github" target="_blank">📂 GitHub</a>
+            <a href="mailto:getclients4u@gmail.com" class="email">📧 Email</a>
         </div>
+
+        <div class="contact-form">
+            <h2>✉️ Get in touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
+                </div>
+                <button type="submit" class="btn-send" id="sendBtn">Send Message</button>
+                <div id="form-status"></div>
+            </form>
+        </div>
+
         <div class="status-bar">
             <span class="dot"></span>
-            Live on Vercel &middot; Powered by OpenClaw
+            Live on Vercel · AgentMail integrated · Powered by OpenClaw
         </div>
     </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('sendBtn');
+            const status = document.getElementById('form-status');
+            const email = document.getElementById('email').value.trim();
+
+            if (!email) {
+                status.className = 'error';
+                status.textContent = 'Please enter your email.';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            status.textContent = '';
+            status.className = '';
+
+            try {
+                const res = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: document.getElementById('name').value.trim(),
+                        email,
+                        message: document.getElementById('message').value.trim(),
+                    }),
+                });
+                const data = await res.json();
+
+                if (data.ok) {
+                    status.className = 'success';
+                    status.textContent = "✅ Thanks! I'll get back to you soon.";
+                    document.getElementById('contactForm').reset();
+                } else {
+                    status.className = 'error';
+                    status.textContent = '❌ ' + (data.message || 'Something went wrong.');
+                }
+            } catch (err) {
+                status.className = 'error';
+                status.textContent = '❌ Could not send. Try again later.';
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+        });
+    </script>
 </body>
 </html>
