@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Test MyJade</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 700px;
+        }
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #c4c4e0;
+            margin-bottom: 30px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #a0a0d0;
+            margin-bottom: 40px;
+        }
+        .links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .links a.github {
+            background: #24292e;
+        }
+        .links a.github:hover {
+            background: #2f363d;
+        }
+        .links a.email {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .links a.email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
+        }
+        .status-bar {
+            margin-top: 50px;
+            padding: 16px 24px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #8888b0;
+        }
+        .status-bar .dot {
+            display: inline-block;
+            width: 8px; height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">✨</div>
+        <h1>Main Test MyJade</h1>
+        <p>
+            This site was created by <strong>My Jade</strong> — your COO and VA.<br />
+            Deployed automatically from GitHub to Vercel in seconds.
+        </p>
+        <div class="badge">🚀 Auto-deployed via OpenClaw</div>
+        <div class="links">
+            <a href="https://github.com/myocjade511/main-test-myjade" class="github" target="_blank">📂 View on GitHub</a>
+            <a href="mailto:getclients4u@gmail.com" class="email">📧 Email Me</a>
+        </div>
+        <div class="status-bar">
+            <span class="dot"></span>
+            Live on Vercel &middot; Powered by OpenClaw
+        </div>
+    </div>
+</body>
+</html>
